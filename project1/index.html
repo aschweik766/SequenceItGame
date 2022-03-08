@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sequence It Game</h1>
+    <p>Select the number that corresponds to the image by task order.</p>
+    <p>If you need a hint, click the *hint button* on the order card for a matching image description.</p>
+    <main class = "container">
+        <div>
+            <ul class = 'drag-list'>
+                <li id = img1 drag= "true">
+                    <img src = " " alt = '' >
+                    <button class = 'hint'>Hint</button>
+                </li>
+                <li id = img2 drag= "true">
+                    <img src = " " alt = '' >
+                    <button class = 'hint'>Hint</button>
+                </li>
+                <li id = img3 drag= "true">
+                    <img src = " " alt = '' >
+                    <button class = 'hint'>Hint</button>
+                </li>
+                <li id = img4 drag= "true">
+                    <img src = " " alt = '' >
+                    <button class = 'hint'>Hint</button>
+                </li>
+                <li id = img5 drag= "true">
+                    <img src = " " alt = '' >
+                    <button class = 'hint'>Hint</button>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul class = 'drag-list'>
+                <li id = num1 drag = "true"> 1 </li>
+                <li id = num2 drag = "true"> 2 </li>
+                <li id = num3 drag = "true"> 3 </li>
+                <li id = num4 drag = "true"> 4 </li>
+                <li id = num5 drag = "true"> 5 </li>
+            </ul>
+        </div>
+    </main>
+
+    <div class = 'winGame'>
+        <button class = 'reset'> Play Again </button>
+    </div>
+
+
+    <script src="app.js"></script>   
+</body>
+</html>
+
 <!-- boilerplate
         heading--game title
         p of instructions/prompt
