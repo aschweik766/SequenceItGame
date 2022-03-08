@@ -1,3 +1,63 @@
 /* will style 10 cards by group Class
     Will style "over" features to indicate drag/drop functionality
     Will style page after "win-game functionality" for engaging appearnace/propt to restart or level up */
+.title-bar {
+    font-family: 'Denk One', sans-serif;
+    font-size: large;
+    line-height: 20%;
+    letter-spacing: 2px;
+    -webkit-text-stroke: .5px black;
+    text-align: center;
+    color: rgb(238, 162, 62);
+    background-color: rgb(17, 233, 222);
+    border: 5px solid rgb(37, 37, 43);
+    border-radius: 15px;
+}
+body {
+    background-color: white;
+    font-family: 'Russo One', sans-serif;
+
+}
+
+ p {
+     text-align: center;
+     font-size: small;
+     line-height: 3px;
+     color:rgb(10, 45, 51);
+ }
+
+
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.drag-list{
+    padding: 20px;
+}
+
+li {
+    border: 2px solid black;
+    padding: 60px;
+}
+
+.hint {
+    padding: 10px;
+    margin: 20px;
+    justify-content:right;
+
+}
+
+.winGame {
+    text-align: center;
+}
