@@ -4,47 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
     <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Denk+One&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <h1>Sequence It Game</h1>
+    <div class = title-bar>
+        <h1>Sequence It Game</h1>
+    </div>
     <p>Select the number that corresponds to the image by task order.</p>
     <p>If you need a hint, click the *hint button* on the order card for a matching image description.</p>
     <main class = "container">
-        <div>
-            <ul class = 'drag-list'>
-                <li id = img1 drag= "true">
+            <div class = 'drag-cards'>
+                <div id = 'img1' class = "cards" 
+                    ondrop = "dragDropHandler(event);"
+                    ondragover = "dragOverHandler(event);"
+                    draggable= "true">
                     <img src = " " alt = '' >
-                    <button class = 'hint'>Hint</button>
-                </li>
-                <li id = img2 drag= "true">
+                        <button class = 'hint'>Hint</button>
+                </div>
+                <div id = 'img2' class = "cards" 
+                    ondrop = "dragDropHandler(event);"
+                    ondragover = "dragOverHandler(event);"
+                    draggable= "true">
                     <img src = " " alt = '' >
-                    <button class = 'hint'>Hint</button>
-                </li>
-                <li id = img3 drag= "true">
+                        <button class = 'hint'>Hint</button>
+                </div>
+                <div id = 'img3' class = "cards" 
+                    ondrop = "dragDropHandler(event);"
+                    ondragover = "dragOverHandler(event);" 
+                    draggable= "true">
+                   <img src = " " alt = '' >
+                        <button class = 'hint'>Hint</button>
+                </div>
+                <div id = 'img4' class = "cards"
+                    ondrop = "dragDropHandler(event);"
+                    ondragover = "dragOverHandler(event);"
+                    draggable= "true">
                     <img src = " " alt = '' >
-                    <button class = 'hint'>Hint</button>
-                </li>
-                <li id = img4 drag= "true">
+                        <button class = 'hint'>Hint</button>
+                </div>
+                <div id = 'img5' class = "cards" 
+                    ondrop = "dragDropHandler(event);"
+                    ondragover = "dragOverHandler(event);"
+                    draggable= "true">
                     <img src = " " alt = '' >
-                    <button class = 'hint'>Hint</button>
-                </li>
-                <li id = img5 drag= "true">
-                    <img src = " " alt = '' >
-                    <button class = 'hint'>Hint</button>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <ul class = 'drag-list'>
-                <li id = num1 drag = "true"> 1 </li>
-                <li id = num2 drag = "true"> 2 </li>
-                <li id = num3 drag = "true"> 3 </li>
-                <li id = num4 drag = "true"> 4 </li>
-                <li id = num5 drag = "true"> 5 </li>
-            </ul>
-        </div>
+                        <button class = 'hint'>Hint</button>
+                </div>
+            </div>
+
+            <div class = 'drag-cards'>
+                <div id = 'num1' class = "cards" 
+                    ondragstart = "dragStartHandler(event);"
+                    ondragenter = "dragEnterHandler(event);"
+                    draggable = "true"> 1 </div>
+                <div id = 'num2' class = "cards" 
+                    ondragstart = "dragStartHandler(event);"
+                    ondragenter = "dragEnterHandler(event);" 
+                    draggable = "true"> 2 </div>
+                <div id = 'num3' class = "cards" 
+                    ondragstart = "dragStartHandler(event);"
+                    ondragenter = "dragEnterHandler(event);" 
+                    draggable = "true"> 3 </div>
+                <div id = 'num4' class = "cards" 
+                    ondragstart = "dragStartHandler(event);"
+                    ondragenter = "dragEnterHandler(event);" 
+                    draggable = "true"> 4 </div>
+                <div id = 'num5' class = "cards" 
+                    ondragstart = "dragStartHandler(event);"
+                    ondragenter = "dragEnterHandler(event);" 
+                    draggable = "true"> 5 </div>
+            </div>
     </main>
 
     <div class = 'winGame'>
