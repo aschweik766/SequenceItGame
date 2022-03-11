@@ -8,22 +8,13 @@
     //or if incorrect, return to original placing/won't work
         //prompt user incorrect use hint
 //use hint if errored
-// const dragNumberCards = document.querySelectorAll('.drag-cards')
-// const dropZoneImage = document.querySelectorAll('.drop-img');
-const canDragCardElements = document.getElementsByClassName('.cards');
-// const canDragCardElements = document.querySelectorAll('.drag-cards .cards');
-let matchingCardScore;//test match, count match total
-let targetId;
-let dropTargetId; 
+let selectedNumberId;
+let selectedDropZoneId;
+const canDragCardElements = document.querySelectorAll('.draggable-cards, .draggable-drop-img div');
+let matchingCardScore = 0;//test match, count match total
+
 
 //function event listener click hint button, image description clue appears, timeout 5 seconds
-
-//DRAGGING-DROPPING FUNCTIONALITY//
-//function addEventListener 
-// dragNumberCards.forEach(element => {
-    // element.addEventListener('dragstart', dragStartHandler);
-// })
-// dropZoneImage.forEach(element => {
 function addEventListener(){
    canDragCardElements.forEach(element => {
         element.addEventListener('dragstart', dragStartHandler);
@@ -42,11 +33,12 @@ function addEventListener(){
 
 
 function dragStartHandler(event) {
+        selectedNumberId = event.target.id
         console.log('start')
         event.currentTarget.style.border = 'dashed';
         event.dataTransfer.setData('text/plain', event.target.id);
-        // event.dataTransfer.setData('text', event.target.getAttribute('data-source-id'));
-        console.log(event.target.id);
+        // console.log(event.target.id);
+       
 }
 
 function dragOverHandler(event) {
@@ -61,37 +53,71 @@ function dragEnterHandler(event) {
     // console.log(event.target.id);
 }
 
+function dragLeaveHandler() {
+    this.classList.remove('hover');
+
+}
+
 function dragDropHandler(event) {
-    event.preventDefault();
+    selectedDropZoneId = event.target.id;
     console.log('drop');
-    event.currentTarget.classList.remove('hover');
-    event.currentTarget.style.background = "yellow";
+//     event.currentTarget.classList.remove('hover');
+//     event.target.style.background = "yellow";
 
     let targetData = event.dataTransfer.getData("text");
-    event.target.appendChild(document.getElementById(targetData))
+    event.target.appendChild(document.getElementById(targetData));
     console.log(targetData);
-        if(testCardMatch(targetId, dropTargetId) = true){
-            document.getElementById(targetId).style.display = "none";
+
+        if(testCardMatch(selectedNumberId === selectedDropZoneId)){
+            document.getElementById(selectedNumberId).style.display = "none";
+            document.getElementById(selectedDropZoneId).style.background = "yellow";
             matchingCardScore ++;
         }
 
-
-    function testCardMatch(targetId, dropTargetId) {
-        if (targetId === 'num1' && dropTargetId === 'img1'){
-            console.log('match');
-            alert('match');
-        } else {
-                console.log('no match');
-                alert('try the hint button');
+        if (testCardMatch === 5) {
+            alert('you win');
         }
-    } 
 }
 
 
-// function dragLeaveHandler() {
-//     this.classList.remove('hover');
+function testCardMatch(event) {
+        if (selectedNumberId === 'num1' && selectedDropZoneId === 'img1'){
+            console.log('match');
+            console.log(selectedDropZoneId);
+            alert('match');
+            return true
 
-// };
+        } else if (selectedNumberId === 'num2' && selectedDropZoneId === 'img2'){
+            console.log('match');
+            alert('match');
+            return true
+
+        } else if (selectedNumberId === 'num3' && selectedDropZoneId === 'img3'){
+            console.log('match');
+            alert('match');
+            return true
+
+        } else if (selectedNumberId === 'num4' && selectedDropZoneId === 'img4'){
+            console.log('match');
+            alert('match');
+            return true
+
+        } else if (selectedNumberId === 'num5' && selectedDropZoneId === 'img5'){
+            console.log('match');
+            alert('match');
+            return true
+            
+        } else {
+            console.log('no match');
+            alert('try the hint button');
+            return false;
+            
+        }
+    } 
+
+
+
+
 
 // function dragEnd() {
 //     console.log('end')
