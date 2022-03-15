@@ -15,18 +15,17 @@
         border-radius: 15px;
     }
     body {
-        /* background-color: white; */
-        /* background-image:url(https://cdn.pixabay.com/photo/2014/04/03/00/30/pencil-308509_960_720.png);
+        background-color:gold;
+        background-image:url(https://cdn.pixabay.com/photo/2014/04/03/00/30/pencil-308509_960_720.png);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: bottom left;
-        background-size: 380px 420px; */
-    
-        background-image: linear-gradient(gold, red);
+        background-size: 380px 420px; 
+        /* background-image: linear-gradient(gold, red); */
         background-repeat: no-repeat;
         background-position: cover;
         font-family: 'Russo One', sans-serif;
-        margin-bottom: 10px;
+        margin: 10 10 10 10;
        
     }
     
@@ -38,6 +37,11 @@
          color:rgb(246, 251, 252);
      }
     
+     img {
+         height: 300px;
+         width: 340px;
+     }
+
      .text-box {
         text-align: center;
         font-size: 40px;
@@ -46,7 +50,9 @@
         font-family: 'Denk One', sans-serif;
      }
     
-    
+    .dropZone {
+        border: white solid 10px;
+    }
     .container {
         max-width: 1000px;
         margin: auto;
@@ -69,6 +75,13 @@
         
     }
     .cards{
+        background-color: rgb(6, 163, 224);
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 60px;
+        margin: 10px;
+    }
+    .drop-cards{
         background-color: rgb(6, 163, 224);
         border: 2px solid black;
         border-radius: 10px;
@@ -184,4 +197,65 @@
     
     .winGame {
         text-align: center;
+    }
+    
+    #winModal {
+        background-color: rgba(76, 245, 245, 0.4);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        overflow: auto;
+        display: none;
+    }
+
+    .reset-modal-button {
+        padding: 14px 18px;
+        background-color: #7e909b;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        color: white;
+        font-family: 'Arial';
+        cursor: pointer;
+
+    }
+
+    .win-modal-textbox {
+        background-color: rgb(243, 210, 20);
+        border: black solid 5px;
+        height: 350px;
+        width: 550px;
+        border-radius: 10px;
+        margin: 150px auto;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        padding: 2%;
+        line-height:200%;
+        font-family: 'Denk One', sans-serif;
+        font-size: small;
+    }
+
+    .win-modal-footer {
+        text-align:  center;
+        font-size: large;
+        text-decoration: none;
+        border: black solid 1px;
+        padding: 2px;
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: #0999f3;
+        color: white;
+    }
+
+    .playAgain {
+        padding: 14px 18px;
+        background-color: #7e909b;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        color: white;
+        font-family: 'Arial';
+        cursor: pointer;
     }
