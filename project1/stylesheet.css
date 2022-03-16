@@ -3,38 +3,39 @@
     Will style page after "win-game functionality" for engaging appearnace/propt to restart or level up */
     .title-bar {
         font-family: 'Denk One', sans-serif;
-        font-size: 30px;
+        font-size: 35px;
         font-style: bold;
         line-height: 70%;
         letter-spacing: 2px;
         -webkit-text-stroke: .5px black;
         text-align: center;
-        color: rgb(243, 234, 223);
+        color: gold;
         background-color: rgb(17, 154, 233);
         border: 5px solid rgb(37, 37, 43);
         border-radius: 15px;
     }
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        line-height: 3px;
+        color:rgb(16, 21, 22);
+        padding: 10px;
+    }
+
     body {
-        background-color:gold;
-        background-image:url(https://cdn.pixabay.com/photo/2014/04/03/00/30/pencil-308509_960_720.png);
+        background-color:red;
+        background-image: linear-gradient(gold, red); 
         background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: bottom left;
-        background-size: 380px 420px; 
-        /* background-image: linear-gradient(gold, red); */
-        background-repeat: no-repeat;
-        background-position: cover;
-        font-family: 'Russo One', sans-serif;
+        font-family: 'Denk One', sans-serif;
         margin: 10 10 10 10;
        
     }
     
-    
      p {
          text-align: center;
-         font-size: medium;
+         font-size: 40px;
          line-height: 3px;
-         color:rgb(246, 251, 252);
+         color:rgb(16, 21, 22);
      }
     
      img {
@@ -51,35 +52,38 @@
      }
     
     .dropZone {
-        border: white solid 10px;
+        border: white solid 7px;
+        border-radius: 5px;
     }
     .container {
         max-width: 1000px;
         margin: auto;
         justify-content: center;
         text-align: center;
-       
-    
     }
     
     .draggable-cards{
         padding: 20px;
         display: flex;
-        justify-content: space-evenly;
-        
     }
+
     .draggable-drop-img {
         padding: 20px;
         display: flex;
+        grid-template-columns: repeat(5, 4fr);
         justify-content: space-evenly;
         
     }
     .cards{
-        background-color: rgb(6, 163, 224);
+        background-color: gold;
         border: 2px solid black;
+        display:flex;
+        width: 100px;
+        height: 100px;
         border-radius: 10px;
         padding: 60px;
         margin: 10px;
+        font-size: 50px;
     }
     .drop-cards{
         background-color: rgb(6, 163, 224);
@@ -87,6 +91,7 @@
         border-radius: 10px;
         padding: 60px;
         margin: 10px;
+        
     }
     .hover {
         opacity: 0.5;
@@ -245,8 +250,6 @@
         padding: 2px;
         margin-left: 100px;
         margin-right: 100px;
-        background-color: #0999f3;
-        color: white;
     }
 
     .playAgain {
@@ -259,3 +262,35 @@
         font-family: 'Arial';
         cursor: pointer;
     }
+
+    .score {
+        border: black solid 5px;
+        background-color: gold;
+        color: black;
+        font-size: 30px;
+        border-radius:10%;
+        width: 150px;
+        height: 150px;
+        
+    }
+    #score-board { 
+        border: black solid 5px;
+        background-color: white;
+        color: black;
+        font-size: 50px;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        padding: 10px;
+    }
+
+
+
+
+
+    /* background-image:url(https://cdn.pixabay.com/photo/2014/04/03/00/30/pencil-308509_960_720.png);
+        background-repeat: no-repeat;
+        background-size: 100px 100px;
+        background-attachment: fixed;
+        background-position: cover; */

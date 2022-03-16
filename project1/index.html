@@ -13,14 +13,34 @@
 <body>
     <div class = title-bar>
         <h1>Sequence It Game</h1>
+        <h2>Making Soup</h2>
     </div>
-    <p>Select the number that corresponds to the image by task order.</p>
-    <p>If you need a hint, click the *hint button* on the order card for a matching image description.</p>
+    <p>Select the Numbered Card (Steps 1-5) that corresponds to the task image by sequenced order.</p>
+    <p> <h2>If you need a hint, click on the hint button on each image card for a task description.</h2></p>
     <main class = "container">
-            <div class = 'draggable-drop-img'>
-                <div  id = 'img1' class = "drop-cards">
-                    
-                    <img id = 'img1' class = 'dropZone' src = "https://media.istockphoto.com/photos/the-fire-on-the-gas-stove-picture-id1332985903?b=1&k=20&m=1332985903&s=170667a&w=0&h=mzZppYRb-RHLUzTF7_yFTjoK_VNoeFgq6ZM4fw_y2Q0= "  alt = 'Pot on stovetop'
+            <div class = 'draggable-drop-img'> 
+                
+                <div  id = 'img1' class = "drop-cards" >
+                    <img id = 'img1' class = 'dropZone' src = "https://live.staticflickr.com/2582/4170207334_73629a5e17_b.jpg " alt = 'Pour soup into the stovepot.' 
+                    ondragenter = "dragEnterHandler(event);"
+                    ondragleave="dragLeaveHandler(event);"
+                    ondrop = "dragDropHandler(event);"
+                    ondragover = "dragOverHandler(event);"
+                    draggable= "false" >
+                        <button class = 'hintModalButton' id = 'openModal2'  >Hint</button>
+                            <div id = 'modal2'>
+                                <div class = 'card-modal-textbox'>
+                                    <h1>Try and match the number card with the image description by order of task occurence or sequence.</h1>
+                                    <p class = 'text-box'>Pour your can of soup into the stove pot.</p>
+                                        <div class = 'card-modal-footer'>
+                                            <a id = 'closeModal2'  href="#"> Close and Try again </a>
+                                        </div>
+                                </div>
+                            </div> 
+                </div>
+
+                <div  id = 'img2' class = "drop-cards">
+                    <img id = 'img2' class = 'dropZone' src = "https://media.istockphoto.com/photos/the-fire-on-the-gas-stove-picture-id1332985903?b=1&k=20&m=1332985903&s=170667a&w=0&h=mzZppYRb-RHLUzTF7_yFTjoK_VNoeFgq6ZM4fw_y2Q0= "  alt = 'Pot on stovetop'
                     ondragenter = "dragEnterHandler(event);"
                     ondragleave="dragLeaveHandler(event);"
                     ondrop = "dragDropHandler(event);"
@@ -30,8 +50,8 @@
                         <button class = 'hintModalButton' id = 'openModal'  >Hint</button>
                         <div id = 'modal'>
                             <div class = 'card-modal-textbox'>
-                                <h1>Hint ** Try and match the number step with the image description Below</h1>
-                                <p class = 'text-box'>The matching image includes putting the pot on the stove.</p>
+                                <h1>Try and match the number card with the image description by order of task occurence or sequence./h1>
+                                <p class = 'text-box'>Turn on the stove.</p>
                                     <div class = 'card-modal-footer'>
                                         <a id = 'closeModal'  href="#"> Close and Try again </a>
                                     </div>
@@ -39,24 +59,6 @@
                         </div>
                 </div>
 
-                <div  id = 'img2' class = "drop-cards" >
-                    <img id = 'img2' class = 'dropZone' src = "https://live.staticflickr.com/2582/4170207334_73629a5e17_b.jpg " alt = 'pouring soup into pot' 
-                    ondragenter = "dragEnterHandler(event);"
-                    ondragleave="dragLeaveHandler(event);"
-                    ondrop = "dragDropHandler(event);"
-                    ondragover = "dragOverHandler(event);"
-                    draggable= "false" >
-                        <button class = 'hintModalButton' id = 'openModal2'  >Hint</button>
-                            <div id = 'modal2'>
-                                <div class = 'card-modal-textbox'>
-                                    <h1>Hint ** Try and match the number step with the image description Below</h1>
-                                    <p class = 'text-box'>The matching image includes soup in the pot.</p>
-                                        <div class = 'card-modal-footer'>
-                                            <a id = 'closeModal2'  href="#"> Close and Try again </a>
-                                        </div>
-                                </div>
-                            </div> 
-                </div>
                 <div id = 'img3' class = "drop-cards">
                    <img id = 'img3' class = 'dropZone' src = "https://images.unsplash.com/photo-1518737003272-dac7c4760d5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80 " alt = 'simmer soup in pot on stovetop' 
                     ondragenter = "dragEnterHandler(event);"
@@ -67,38 +69,17 @@
                     <button class = 'hintModalButton' id = 'openModal3'  >Hint</button>
                         <div id = 'modal3'>
                             <div class = 'card-modal-textbox'>
-                                <h1>Hint ** Try and match the number step with the image description Below</h1>
-                                <p class = 'text-box'>The matching image includes cooking pot of soup.</p>
+                                <h1>Try and match the number card with the image description by order of task occurence or sequence.</h1>
+                                <p class = 'text-box'>Place soup on stove and simmer until hot.</p>
                                     <div class = 'card-modal-footer'>
                                         <a id = 'closeModal3'  href="#"> Close and Try again </a>
                                     </div>
                             </div>
                         </div> 
                 </div>
-
-                <div id = 'img4' class = "drop-cards">
-                    <img  id = 'img4' class = 'dropZone' src = "https://images.unsplash.com/photo-1603208614636-aa308b918a32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80 " alt = 'pour soup into bowl and eat'
-                        ondragover = "dragOverHandler(event);" 
-                        ondragenter = "dragEnterHandler(event);"
-                        ondragleave="dragLeaveHandler(event);"
-                        ondrop = "dragDropHandler(event);"
-                        
-                        draggable= "false">  
-
-                        <button class = 'hintModalButton' id = 'openModal4'  >Hint</button>
-                            <div id = 'modal4'>
-                                <div class = 'card-modal-textbox'>
-                                    <h1>Hint ** Try and match the number step with the image description Below</h1>
-                                    <p class = 'text-box'>The matching image includes serving the soup.</p>
-                                        <div class = 'card-modal-footer'>
-                                            <a id = 'closeModal4'  href="#"> Close and Try again </a>
-                                        </div>
-                                </div>
-                            </div> 
-                </div>
                 
-                <div id = 'img5' class = "drop-cards">
-                    <img id = 'img5' class = 'dropZone' src = "https://images.unsplash.com/photo-1629234358103-5b5ee53ece9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 " alt = 'turn off the stovetop' 
+                <div id = 'img4' class = "drop-cards">
+                    <img id = 'img4' class = 'dropZone' src = "https://images.unsplash.com/photo-1629234358103-5b5ee53ece9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 " alt = 'turn off the stovetop' 
                         ondragenter = "dragEnterHandler(event);"
                         ondragleave="dragLeaveHandler(event);"
                         ondrop = "dragDropHandler(event);"
@@ -107,37 +88,59 @@
                         <button class = 'hintModalButton' id = 'openModal5'  >Hint</button>
                             <div id = 'modal5'>
                                 <div class = 'card-modal-textbox'>
-                                    <h1>Hint ** Try and match the number step with the image description Below</h1>
-                                    <p class = 'text-box'>The matching image includes a stove turned off.</p>
+                                    <h1>Try and match the number card with the image description by order of task occurence or sequence.</h1>
+                                    <p class = 'text-box'>Turn off the stove and clean up for safety.</p>
                                         <div class = 'card-modal-footer'>
                                             <a id = 'closeModal5'  href="#"> Close and Try again </a>
                                         </div>
                                 </div>
                             </div> 
                         </div>
+
+                        <div id = 'img5' class = "drop-cards">
+                            <img  id = 'img5' class = 'dropZone' src = "https://images.unsplash.com/photo-1603208614636-aa308b918a32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80 " alt = 'pour soup into bowl and eat'
+                                ondragover = "dragOverHandler(event);" 
+                                ondragenter = "dragEnterHandler(event);"
+                                ondragleave="dragLeaveHandler(event);"
+                                ondrop = "dragDropHandler(event);"
+                                
+                                draggable= "false">  
+        
+                                <button class = 'hintModalButton' id = 'openModal4'  >Hint</button>
+                                    <div id = 'modal4'>
+                                        <div class = 'card-modal-textbox'>
+                                            <h1>Try and match the number card with the image description by order of task occurence or sequence.</h1>
+                                            <p class = 'text-box'>Serve the soup in a bowl.</p>
+                                                <div class = 'card-modal-footer'>
+                                                    <a id = 'closeModal4'  href="#"> Close and Try again </a>
+                                                </div>
+                                        </div>
+                                    </div> 
+                        </div>
+
                  </div>
 
             <div class = 'draggable-cards'>
                 <div id = 'num1' class = "cards" 
                     ondragstart = "dragStartHandler(event);"
                     ondragenter = "dragEnterHandler(event);"
-                    draggable = "true"> Step 1 </div>
+                    draggable = "true">  1 </div>
                 <div id = 'num2' class = "cards" 
                     ondragstart = "dragStartHandler(event);"
                     ondragenter = "dragEnterHandler(event);" 
-                    draggable = "true"> Step 2 </div>
+                    draggable = "true">  2 </div>
                 <div id = 'num3' class = "cards" 
                     ondragstart = "dragStartHandler(event);"
                     ondragenter = "dragEnterHandler(event);" 
-                    draggable = "true"> Step 3 </div>
+                    draggable = "true">  3 </div>
                 <div id = 'num4' class = "cards" 
                     ondragstart = "dragStartHandler(event);"
                     ondragenter = "dragEnterHandler(event);" 
-                    draggable = "true"> Step 4 </div>
+                    draggable = "true">  4 </div>
                 <div id = 'num5' class = "cards" 
                     ondragstart = "dragStartHandler(event);"
                     ondragenter = "dragEnterHandler(event);" 
-                    draggable = "true"> Step 5 </div>
+                    draggable = "true">  5 </div>
             </div>
     </main>
 
@@ -151,32 +154,14 @@
                         <button class = 'playAgain' id = 'closeWinModal'> Play Again </button>
                     </div>
             </div>
-        </div>
-
+    </div>
+    <div class = score > Score
+        <div class = score id = 'score-board'>  </div> 
+    </div>
+    
+    
+    
 
     <script src="app.js"></script>   
 </body>
 </html>
-
-<!-- boilerplate
-        heading--game title
-        p of instructions/prompt
-    
-        container main class
-            div 
-                ul of drag-numbers
-                    li ID number, boolean true, text (5)
-            div
-                ul of drag-img-src
-                    li ID number, boolean true, text (5)
-            div
-
-        /main
-    
-        div win message, prompt
-            heading You Win, Good Work!
-            div per img-src (5)
-            hidden numbers
-            div
-                button-ID reset-"play again"
-        -->
