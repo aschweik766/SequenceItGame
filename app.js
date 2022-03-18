@@ -2,16 +2,23 @@
 let selectedNumberId;
 let selectedDropZoneId;
 
+let step1 = document.getElementById('img1');
+let step2 = document.getElementById('img2');
+let step3 = document.getElementById('img3');
+let step4 = document.getElementById('img4');
+let step5 = document.getElementById('img5');
+
 const resetButton = document.querySelector('.reset');
 const canDragCardItems = document.querySelectorAll('.dropZone'  );
 let scoreBoard = document.querySelector('#score-board');
 let winGameScore = 5; //winning score
 let matchingCardScore = 0;//test match, count match total points/score
 
+
+
 const showScoreTotals = () => {
     matchingCardScore++
     scoreBoard.innerText = matchingCardScore;
-    // console.log(matchingCardScore);
 }      
 
 const winGameModal = () => {
@@ -24,6 +31,7 @@ const playAgainClick = () => {window.location.reload();}
 
 
 
+
 function addEventListener(){
    canDragCardItems.forEach(items => {
         items.addEventListener('dragstart', dragStartHandler);
@@ -31,6 +39,7 @@ function addEventListener(){
         items.addEventListener('dragenter', dragEnterHandler);
         items.addEventListener('dragdrop', dragDropHandler);
         items.addEventListener('dragleave', dragLeaveHandler);
+        // items.addEventListener('dragend', dragEndHandler);
     })
 }
 
@@ -56,51 +65,59 @@ function dragOverHandler(event) {
         return false;
     }
 }
-function dragEnterHandler(event) {
-    event.currentTarget.classList.add('hover');
-    event.currentTarget.style.background = 'yellow'; 
+
+function dragEnterHandler(event) {event.currentTarget.classList.add('hover');
+    event.currentTarget.style.background = ''; 
 }
-function dragLeaveHandler(event) {
-    event.currentTarget.classList.remove('hover');
-}
+function dragLeaveHandler(event) { event.currentTarget.classList.remove('hover');}
 
 function dragDropHandler(event) {
     selectedDropZoneId = event.target.id;
-    // console.log('drop');
     event.currentTarget.classList.remove('hover');
     let targetData = event.dataTransfer.getData("text");
     event.target.appendChild(document.getElementById(targetData));
-    // console.log(dropZoneBackground);
-        if(testCardMatch(selectedNumberId === selectedDropZoneId)) {
+        if(testCardMatch(selectedNumberId === selectedDropZoneId)) { 
             showScoreTotals();
+            
         }
          if (matchingCardScore === 5) {
             winGameModal();
         }
  }
 
+
+ const dragEndHandler = () => {
+    if(selectedDropZoneId === 'img1'){
+        let node1 = document.createTextNode('Step One');
+        step1.appendChild(node1);
+        console.log('display step');
+    }else if(selectedDropZoneId === 'img2'){
+        let node2 = document.createTextNode('Step Two');
+        step2.appendChild(node2);
+    }else if(selectedDropZoneId === 'img3'){
+        let node3 = document.createTextNode('Step Three');
+        step3.appendChild(node3);
+    }else if(selectedDropZoneId === 'img4'){
+        let node4 = document.createTextNode('Step Four');
+        step4.appendChild(node4);
+    }else if(selectedDropZoneId === 'img5'){
+        let node5 = document.createTextNode('Step Five');
+        step5.appendChild(node5);
+    }
+}
+
 function testCardMatch() {
+    
     if (selectedNumberId === 'num1' && selectedDropZoneId === 'img1'){
-        // console.log('match');
-        // console.log(selectedDropZoneId);
         return true
-
     } else if (selectedNumberId === 'num2' && selectedDropZoneId === 'img2'){
-        // console.log('match');
         return true
-
     } else if (selectedNumberId === 'num3' && selectedDropZoneId === 'img3'){
-        // console.log('match');
         return true
-
     } else if (selectedNumberId === 'num4' && selectedDropZoneId === 'img4'){
-        // console.log('match');
         return true
-
     } else if (selectedNumberId === 'num5' && selectedDropZoneId === 'img5'){
-        // console.log('match');
         return true
-
     } else {
         return false;
     }
