@@ -3,7 +3,7 @@
     font-family: 'Denk One', sans-serif;
     font-size: 35px;
     font-style: bold;
-    line-height: 70%;
+    line-height: 50%;
     letter-spacing: 2px;
     -webkit-text-stroke: .5px black;
     text-align: center;
@@ -14,7 +14,7 @@
 }
 h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 3px;
     color:rgb(16, 21, 22);
     padding: 10px;
@@ -29,44 +29,46 @@ body {
     
 }
 
-    p {
-        text-align: center;
-        font-size: 40px;
-        line-height: 3px;
-        color:rgb(16, 21, 22);
-    }
-
-    img {
-        height: 300px;
-        width: 340px;
-    }
-
-    .text-box {
+p {
     text-align: center;
-    font-size: 40px;
-    line-height: 50px;
-    color:rgb(16, 20, 20);
-    font-family: 'Denk One', sans-serif;
-    }
+    font-size: 22px;
+    line-height: 3px;
+    color:rgb(16, 21, 22);
+}
+
+img {
+    height: 220px;
+    width: 260px;
+    margin-top: 4px;
+}
+
+.text-box {
+text-align: center;
+font-size: 40px;
+line-height: 50px;
+color:rgb(16, 20, 20);
+font-family: 'Denk One', sans-serif;
+}
 
 .dropZone {
-    border: white solid 7px;
+    border: white solid 3px;
     border-radius: 5px;
 }
 .container {
-    max-width: 1000px;
+    max-width: auto;
     margin: auto;
     justify-content: center;
     text-align: center;
 }
 
 .draggable-cards{
-    padding: 20px;
+    padding: 10px;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .draggable-drop-img {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     grid-template-columns: repeat(5, 4fr);
     justify-content: space-evenly;
@@ -78,17 +80,17 @@ body {
     justify-content: center;
     text-align: center;
     width: 100px;
-    height: 100px;
+    height: 110px;
     border-radius: 10px;
     padding: 20px;
-    margin: 10px;
-    font-size: 50px;
+    margin: 10px 0px 10px 0px;
+    font-size: 80px;
 }
 .drop-cards{
     background-color: rgb(6, 163, 224);
     border: 2px solid black;
     border-radius: 10px;
-    padding: 60px;
+    padding: 20px;
     margin: 10px;
     
 }
@@ -199,8 +201,8 @@ body {
 }
 
 .hintModalButton {
-    padding: 14px 18px;
-    margin: 10px 0px 0px 0px;
+    padding: 5px 8px;
+    margin: 4px 0px 0px 0px;
     background-color: #8adb65;
     border: none;
     outline: none;
@@ -208,6 +210,8 @@ body {
     color: black;
     font-family: 'Arial';
     cursor: pointer;
+    display: block;
+    justify-content: center;
 }
 
 #howToPlayModal {
@@ -287,26 +291,27 @@ body {
     border: black solid 5px;
     background-color: gold;
     color: black;
-    font-size: 30px;
+    font-size: 20px;
     border-radius:10%;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1px;
     
 }
 #score-board { 
     border: black solid 5px;
     background-color: white;
     color: black;
-    font-size: 50px;
+    font-size: 45px;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     margin: auto;
     padding: 10px;
 }
 
 .game-panel-choices{
-    padding: 300px 100px;
+    padding: 80px 100px;
     background-image: url(https://cdn.pixabay.com/photo/2017/09/26/22/14/golden-2790307_960_720.png);
     /* background-repeat: no-repeat; */
     background-size: auto;
