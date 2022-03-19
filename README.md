@@ -3,6 +3,8 @@
 Game Link: https://aschweik766.github.io/sequenceItGame/startpage.html
 ## About 
 This is a simple drag and drop matching game designed to work as an educational tool to support a user's practice of step by step sequencing and memory skills related to daily task of choice. Learning requires repetition, and interactive games tend to bring more enjoyment and visual feedback when it comes to rehearsal of skills; especially if the user can engage in errorless learning. For this game, the user can rehearse the steps to making a bowl of soup.
+## User Inspiration
+As a therapist that works with a variety of individuals that struggle with commpleting and participating in activities of daily living, i.e., taking care of oneself, engaging in cooking, cleaining, self-care, and anything that requires functional cognitive-linguistic and memory skills, starting and finishing tasks can be a great challenge! I consider my work with Stroke patients, Autistic individuals, ADHD(myself), and people like my GrandPa suffering with Dementia when I developed this game. Visual tools can be such an excellent support and learning tool, and there are NOT enough games that target these skills. I hope this one helps out!
 
 ## Design
 Sequence It Game showcases 2 levels for the user to choose: Level 1 and Level 2 for Making Soup. The user can practice ordering or labeling the steps to making a pot of soup, with visual feedback for an error, and opportunity to evaluate or correct card-matches by selecting the hint buttons. This game utilizes several modals for interactive hints.
