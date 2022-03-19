@@ -1,4 +1,6 @@
 # sequenceItGame
+
+Game Link: https://aschweik766.github.io/sequenceItGame/startpage.html
 ## About 
 This is a simple drag and drop matching game designed to work as an educational tool to support a user's practice of step by step sequencing and memory skills related to daily task of choice. Learning requires repetition, and interactive games tend to bring more enjoyment and visual feedback when it comes to rehearsal of skills; especially if the user can engage in errorless learning. For this game, the user can rehearse the steps to making a bowl of soup.
 
