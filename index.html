@@ -12,8 +12,11 @@
 </head>
 <body>
     <div class = title-bar>
+    <button class = 'playAgain' id = 'tryAgain'> Try Again </button>
+    <button class = 'playAgain' id = 'returnHome'> Return Home </button>
         <h1>Sequence It Game</h1>
         <h2>Making Soup on the Stove</h2>
+        
     </div>
     <p>Arrange number cards onto the matching images, from first to last step, in order to safely make soup.</p>
     <p> <h2>Click on the hint button on each image card for a task description.</h2></p>
@@ -156,17 +159,14 @@
                 <h1>Great work! You win!</h1>
                 <p class = 'text-box'>Hit Play Again to reset game.</p>
                     <div class = 'win-modal-footer'>
-                        <button class = 'playAgain' id = 'closeWinModal'> Play Again </button>
+                        <button class = 'playAgain' id = 'closeWinModal'> Close </button>
+                        <button class = 'playAgain' id = 'closeReset'> Play Again </button>
                     </div>
             </div>
     </div>
-    <div class = score > Score
+    <div class = 'score' > Score
         <div class = score id = 'score-board'>  </div> 
     </div>
-    
-    
-    
-
     <script src="app.js"></script>   
 </body>
 </html>

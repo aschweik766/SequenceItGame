@@ -1,10 +1,42 @@
 # sequenceItGame
-This is a education tool and educational game to support executive functioning and memory skills related to daily task sequencing, planning, or general use as a visual support.
-What a better way to practice a daily life skill, than through a fun game that supports errorless learning. 
+## About 
+This is a simple drag and drop matching game designed to work as an educational tool to support a user's practice of step by step sequencing and memory skills related to daily task of choice. Learning requires repetition, and interactive games tend to bring more enjoyment and visual feedback when it comes to rehearsal of skills; especially if the user can engage in errorless learning. For this game, the user can rehearse the steps to making a bowl of soup.
 
-For this game, I have made a an easy level, with all the bells and whistles to support learning a step by step task, such as making a can of soup for onself on the stove. The user can practice ordering or labeling the steps to making a pot of soup, with visual feedback for an error, and opportunity to evaluate a card match choice by selecting the hint buttons. It is impossible to fully drag and drop an incorrect step order onto a picture card that does not match. Rather, the game is going to prompt the player/user through color changes and preventing a drag and drop through the game functionality itself. As well, the user will be able to track their accy through a score counter, as well as through the visaul feedback of correctly ordering cards by step, and watching their divs turn green. 
+## Design
+Sequence It Game showcases 2 levels for the user to choose: Level 1 and Level 2 for Making Soup. The user can practice ordering or labeling the steps to making a pot of soup, with visual feedback for an error, and opportunity to evaluate or correct card-matches by selecting the hint buttons. This game utilizes several modals for interactive hints.
 
-Stretch goals:
-Developing an additional level to challenge the user, so similar cards and layout, but without the errorless learning features such as color changes, and use of hints. 
+Level 1 and 2 both prevent drag and drop on incorrect card match selections. Rather, Level 1 will feature visual prompts to the user through card color changes of green(go), red(no) upon drag over events, as well as use of hint buttons and image descriptions. A user will track match accuracy through a score counter. Upon correct matches, cards will turn green and display the text step number, i.e., "Step One." 
 
-Developing game levels and topic selections for a variety of daily tasks that require step by step planning and task execution, i.e., bathing routine, taking medications, making coffee, opening and sorting mail. There are so many tasks indivdiuals do on a daily basis that can be reinforced or learned in a simple and interactive game. 
+Level 2 is arranged in a slighlty more challenging image task order and will not feature color changes to support a user's drag and drop selection events. As well, dragging a step card over an incorrect image before drop, results in a point loss, and ultimately, inability to win the level. 
+
+![image]
+(file:///Users/aschweikhard/Desktop/Screen%20Shot%202022-03-18%20at%209.46.43%20PM.png) Game Play, level 1
+
+![image]
+file:///Users/aschweikhard/Desktop/general-assembly/week7/project1/GitHubProject-1-Clone/SequenceItGame/Screen%20Shot%202022-03-18%20at%209.46.09%20PM.png Main Page
+
+
+### Stretch goals
+Game features or future ideas:
+--activity levels for various categories of activities of daily living, i.e., bathing, making coffee, sorting mail, taking medications, etc.
+--Increasing difficulty per category level, i.e., a level 3 for Making Soup.
+--Improving the modal prompt for ending a game, based on incorrect points/matches on harder levels.
+--Color changes, versatility;
+--increased web and user accessiblity
+--voice-text-reader features or buttons
+
+### Development Improvements
+-The drag and drop events do cause some "bouncing around" within the container, as well as the score-board div. This is not a major functionality issue, more so a styling issue to be improved.
+-Better accessilibty
+-The end-game based on lack of points/incorrect matches on Make Soup Level 2 should be more specific, as the logic is not as concrete on this feature at this time.
+
+### Resources
+Give credit, where credit is due!
+ ---sourced free downloadable images---
+pixelbay.com
+istockphoto.com
+---tutorials that helped my whiteboarding and pseudocoding process---   
+developer.mozilla.org 
+w3schools.com
+Drag and Drop API video tutorial by James Schneider https://youtu.be/twq9WHgUhQc
+https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API

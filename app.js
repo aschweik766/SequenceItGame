@@ -8,27 +8,16 @@ let step3 = document.getElementById('img3');
 let step4 = document.getElementById('img4');
 let step5 = document.getElementById('img5');
 
-const resetButton = document.querySelector('.reset');
+const resetButton = document.querySelector('#closeReset');
 const canDragCardItems = document.querySelectorAll('.dropZone'  );
 let scoreBoard = document.querySelector('#score-board');
 let winGameScore = 5; //winning score
 let matchingCardScore = 0;//test match, count match total points/score
 
-
-
 const showScoreTotals = () => {
     matchingCardScore++
     scoreBoard.innerText = matchingCardScore;
 }      
-
-const winGameModal = () => {
-    if (matchingCardScore === 5) {
-        winModal.style.display = 'block'; 
-        // console.log('open winModal'); 
-    }
-}
-const playAgainClick = () => {window.location.reload();}
-
 
 
 
@@ -78,7 +67,6 @@ function dragDropHandler(event) {
     event.target.appendChild(document.getElementById(targetData));
         if(testCardMatch(selectedNumberId === selectedDropZoneId)) { 
             showScoreTotals();
-            
         }
          if (matchingCardScore === 5) {
             winGameModal();
@@ -146,7 +134,19 @@ const closeCardButn5 = document.getElementById('closeModal5');
 
 
 const winModal = document.getElementById('winModal');
-const playAgainButn = document.getElementById('closeWinModal');
+const closeWinMod = document.getElementById('closeWinModal')
+const playAgainButn = document.getElementById('closeReset');
+const tryAgainButn = document.getElementById('tryAgain');
+const returnHomeButn = document.getElementById('returnHome');
+
+const winGameModal = () => {
+    if (matchingCardScore === 5) {
+        winModal.style.display = 'block'; 
+    }
+}
+const playAgainClick = () => {window.location.reload();}
+const resetGame = () => {window.location.reload();}
+const returnButn = () => {location.href = "startpage.html";}
 
 const openModal = () => { modal.style.display = 'block';}
 const closeModal = () => { modal.style.display = 'none';}
@@ -162,8 +162,12 @@ const closeModal4 = () => { modal4.style.display = 'none';}
 
 const openModal5 = () => { modal5.style.display = 'block';}
 const closeModal5 = () => { modal5.style.display = 'none';}
+const closeWinModal = () => { winModal.style.display = 'none';}
 
+tryAgainButn.addEventListener('click', resetGame);
 playAgainButn.addEventListener('click', playAgainClick);
+closeWinMod.addEventListener('click', closeWinModal);
+returnHomeButn.addEventListener('click', returnButn);
 
 openCardButn.addEventListener('click', openModal);
 closeCardButn.addEventListener('click', closeModal);
