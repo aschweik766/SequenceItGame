@@ -11,11 +11,11 @@ Level 1 and 2 both prevent drag and drop on incorrect card match selections. Rat
 
 Level 2 is arranged in a slighlty more challenging image task order and will not feature color changes to support a user's drag and drop selection events. As well, dragging a step card over an incorrect image before drop, results in a point loss, and ultimately, inability to win the level. 
 
-![image]
-<img src = "https://github.com/aschweik766/sequenceItGame/blob/main/Screen%20Shot%202022-03-18%20at%209.47.15%20PM.png" width = "100" Game Play Hint Modal>
 
-![image]
-<img src = "https://github.com/aschweik766/sequenceItGame/blob/main/Screen%20Shot%202022-03-18%20at%209.46.43%20PM.png" width = "100" Game Play Level 1>
+<img src = "https://github.com/aschweik766/sequenceItGame/blob/main/Screen%20Shot%202022-03-18%20at%209.47.15%20PM.png" width = "500" Game Play Hint Modal>
+
+
+<img src = "https://github.com/aschweik766/sequenceItGame/blob/main/Screen%20Shot%202022-03-18%20at%209.46.43%20PM.png" width = "500" Game Play Level 1>
 
 
 ### Stretch goals
